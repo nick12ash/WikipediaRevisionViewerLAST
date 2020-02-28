@@ -16,7 +16,7 @@ public class ParseUtils
             throw new ParameterIsNotJsonStringException();
         }
 
-        if(jsonString.equals("{\"batchcomplete\":\"\"}"))
+        if(jsonString.startsWith("{\"batchcomplete\":\"\""))
         {
             Article article = new Article(null, null, null);
             return(article);
