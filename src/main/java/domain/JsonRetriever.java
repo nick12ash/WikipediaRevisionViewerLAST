@@ -18,7 +18,7 @@ public class JsonRetriever
                 + title.replaceAll("\\s", "") + "&rvprop=timestamp|user&rvlimit=30&redirects";
     }
 
-    public String search() throws MalformedURLException
+    public String search() throws IOException
     {
         URL url = new URL(urlString);
         URLConnection connection = null;
@@ -34,6 +34,7 @@ public class JsonRetriever
             in = connection.getInputStream();
         } catch (IOException e) {
             e.printStackTrace();
+            throw e;
         }
         Scanner scanner = new Scanner(in);
         String result = scanner.nextLine();

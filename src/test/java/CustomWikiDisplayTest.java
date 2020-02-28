@@ -5,6 +5,7 @@ import exceptions.ParameterIsNotJsonStringException;
 import org.junit.jupiter.api.Test;
 import utils.ParseUtils;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -12,8 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class CustomWikiDisplayTest
 {
     @Test
-    void toStringTestEmpty() throws ParameterIsNotJsonStringException, MalformedURLException
-    {
+    void toStringTestEmpty() throws ParameterIsNotJsonStringException, IOException {
         String title = "";
 
         JsonRetriever retriever = new JsonRetriever(title);
@@ -28,7 +28,7 @@ public class CustomWikiDisplayTest
 
 
     @Test
-    void toStringTestWithSpaces() throws ParameterIsNotJsonStringException, MalformedURLException
+    void toStringTestWithSpaces() throws ParameterIsNotJsonStringException, IOException
     {
         String title = "Barack Obama";
 

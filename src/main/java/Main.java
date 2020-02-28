@@ -5,6 +5,7 @@ import domain.JsonRetriever;
 import utils.ParseUtils;
 
 import java.io.IOException;
+import java.net.UnknownHostException;
 import java.util.Scanner;
 
 public class Main

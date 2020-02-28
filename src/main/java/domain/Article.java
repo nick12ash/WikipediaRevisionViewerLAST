@@ -26,7 +26,6 @@ public class Article
         for (Map.Entry<String, String> entry : timestampsAndUsernames.entrySet())
         {
             result += "User '" + (entry.getValue() + "' edited the Wikipedia article at " + entry.getKey() + "\n");
-            //reformat timestamps?
         }
         return(result);
     }
