@@ -14,7 +14,7 @@ public class CustomWikiDisplay
     {
         if(article.getTitle() == null)
         {
-            return("Empty title was entered. Please try again.");
+            return("There was no article found with that title. Please try again.");
         }
 
         displayString += article.getChanges() + article.getRedirection();
