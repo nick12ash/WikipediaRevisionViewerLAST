@@ -22,7 +22,7 @@ public class CustomWikiDisplayTest
         Article article = parser.parseJsonToArticle(jsonString);
         CustomWikiDisplay wikiDisplay = new CustomWikiDisplay(article);
 
-        assertEquals("Empty title was entered. Please try again.",
+        assertEquals("There was no article found with that title. Please try again.",
                 wikiDisplay.toString());
     }
 
