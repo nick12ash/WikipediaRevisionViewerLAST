@@ -25,19 +25,17 @@ public class Article
         String result = "";
         for (Map.Entry<String, String> entry : timestampsAndUsernames.entrySet())
         {
-            result += "User '" + (entry.getValue() + "' edited the Wikipedia article at " + entry.getKey() + "\n");
+            result += "User: '" + (entry.getValue() + "' TimeStamp " + entry.getKey() + "\n");
         }
         return(result);
     }
 
 
-    public String getTimestamps()
-    {
+    public String getTimestamps() {
         String result = "";
         for (Map.Entry<String, String> entry : timestampsAndUsernames.entrySet())
         {
             result += (entry.getKey()) + ", ";
-
         }
         return(result);
     }
@@ -48,7 +46,18 @@ public class Article
         for (Map.Entry<String, String> entry : timestampsAndUsernames.entrySet())
         {
             result += (entry.getValue()) + ", ";
+        }
+        return(result);
+    }
 
+    public Integer getNumberChanges()
+    {
+        Integer result = 0;
+        for (Map.Entry<String, String> entry : timestampsAndUsernames.entrySet())
+        {
+            if (getTimestamps().equals("2020")) {
+                result += 1;
+            }
         }
         return(result);
     }

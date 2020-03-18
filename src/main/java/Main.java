@@ -13,7 +13,7 @@ public class Main
     public static void main(String[] args) throws IOException, ParameterIsNotJsonStringException
     {
         Scanner input = new Scanner(System.in);
-        System.out.println("Welcome to the Wikipedia Revision Viewer. Please type the title of a Wikipedia article title. ");
+        System.out.println("Welcome to the Wikipedia Revision Viewer. Please type the title of a Wikipedia article title.");
         String title = input.nextLine();
 
         JsonRetriever retriever = new JsonRetriever(title);
@@ -24,6 +24,9 @@ public class Main
         Article article = parser.parseJsonToArticle(jsonString);
 
         CustomWikiDisplay wikiDisplay = new CustomWikiDisplay(article);
+        System.out.println("Would you like to see 'Y' or 'N' display?");
+        String find = input.nextLine();
         System.out.println(wikiDisplay.toString());
+
     }
 }

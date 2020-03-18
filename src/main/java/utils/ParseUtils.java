@@ -22,7 +22,6 @@ public class ParseUtils
             return(article);
         }
 
-
         String title = null;
         HashMap<String, String> timestampsAndUsernames = new HashMap<>();
             String time;
